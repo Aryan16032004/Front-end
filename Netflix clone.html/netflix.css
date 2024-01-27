@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: rgb(33, 32, 32);
+    color: white;
+    margin: 0;
+    font-size: 1.2vw;
+}
+
+.mainbox {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4) url(bg-image.jpg) right no-repeat;
+    height: 80vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px,100vw);
+    background-size: cover;
+    background-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    /* border: 1px solid red; */
+    margin: auto auto;
+    min-width: 60vw;
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.logo {
+    margin-top: 1rem;
+    max-width: 150px;
+    cursor: pointer;
+}
+
+img {
+    height: 2.8rem;
+}
+
+.signin {
+    padding: 0.65rem 1.4rem;
+    color: white;
+    border: none;
+    background-color: red;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signin:hover {
+    background-color: rgb(200, 8, 17);
+}
+
+#language {
+    padding: 0.45rem 1.4rem;
+    width: 8vw;
+    border: 0.1px solid white;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-weight: 700;
+    font-size: 1vw;
+    margin-right: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.rnav {
+    /* margin-right: 11rem; */
+}
+
+option {
+    color: black;
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.content {
+    /* border: 1px solid red; */
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    top: 22vh;
+    left: 5vw;
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
+    /* margin-top: 80px; */
+    /* font-size: 1.5rem; */
+    line-height: 3vw;
+    
+}
+
+.content h3 {
+    font-weight: 700;
+    font-size: 2.8vw;
+}
+
+.content h5 {
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+
+.content p {
+    font-weight: 400;
+    font-size: 1.2vw;
+}
+
+.email-signin {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    background: transparent;
+    border-radius: 4px;
+    margin-top: 1vh;
+    /* margin-left: 16vw; */
+}
+
+.email-signin input {
+
+    border: 1px solid red;
+    border-radius: 4px;
+    width: 100%;
+    width: 25vw;
+    height: 7vh;
+    background-color: transparent;
+    color: white;
+
+}
+
+.email-signin input::placeholder {
+    color: white;
+    opacity: 0.7;
+    font-size: 1vw;
+    padding-left: 10px;
+}
+
+.email-signin-btn {
+    background-color: red;
+    border-radius: 4px;
+    border: 0;
+    color: #fff;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 13vw;
+    height: 7vh;
+    transition: background-color 0.3s;
+}
+
+.email-signin-btn:hover {
+    background-color: rgb(200, 8, 17);
+}
+
+.information {
+    display: flex;
+    align-items: center;
+}
+
+.features {
+    font-size: 1.5vw;
+    margin-top: 10px;
+}
+
+.features p {
+    font-size: 1.5vw;
+    margin-top: 10px;
+}
+
+.row {
+    padding: 5vh 10% 15vh 12%;
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    gap: 5vw;
+    align-items: center;
+}
+
+.download-box
+{position: relative;
+    width: 20.5vw;
+    border: 1px solid grey;
+    background-color: black;
+    border-radius: 10px;
+    height: 12vh;
+    bottom: 20vh;
+    left: 10.5vw;
+}
+.download-box img{
+    margin: 10px ;
+    height: 75%;
+}
+.download-box .download-name{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 2vh;
+    left: 5vw;
+}
+
+.download-box .download-name .name{
+    font-size: 16px;
+    font-weight: 600;
+}
+.download-box .download-name .downloading{
+    font-size:14px;
+    color: rgb(16, 98, 223);
+    margin-top: 0;
+}
+.download-box .gif{
+    position: relative;
+    bottom:9.5vh ;
+    left: 16vw;
+    width: 4rem; 
+    border: 2px solid black;
+    height: 4vh;
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) center center no-repeat;
+    display: block;
+    background-size: 100%;
+    outline-offset: -2px;
+}
+
+.imag-col {
+    position: relative;
+
+
+}
+
+.features-img {
+
+    height: auto;
+    object-fit: contain;
+}
+
+.overlay-video {
+    position: absolute;
+    max-width: 100%;
+    top: 13vh;
+    left: 5.5vw;
+    width: 72.8%;
+    object-fit: cover;
+}
+.faq{
+    margin-top: 10px;
+    background-color: black;
+    padding: 10px 5%;
+    text-align: center;
+    font-size: 16px;
+}
+.faq h2{
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 35px;
+}
+.accordion{
+    margin: 50px auto;
+    width: 80vw;
+    max-width: 60vw;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 50px;
+    font-weight: 100;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.1s;
+}
+
+.accordion .anwers{
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.check{
+    display: none;
+}
+.check:checked~label+.anwers{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.check:checked~label::after{
+    transform: rotate(45deg);
+}
+.faq .email-signin{
+    margin: 16px auto;
+}
+.faq input{
+   border: 2px solid green;
+}
+
+
+footer{
+    margin-top: 10px;
+    background-color: black;
+    padding: 5% 12%;
+    /* text-align: center; */
+    /* font-size: 18px; */
+}
+footer a{
+    color: white;
+    font-weight: 100;
+    opacity: 0.8;
+    font-size: 16px;
+}
+footer .contacting-ways{
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 300px  ;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+footer .contacting-ways a{
+    font-size: 14px;
+    color: white;
+    font-weight: 100;
+    opacity: 0.8;
+}
+footer #language{
+    margin-top: 35px;
+}
+.india{
+    font-size: 14px;
+    color: white;
+    font-weight: 100;
+    opacity: 0.8;
+    margin-top: 15px;
+}
+
+

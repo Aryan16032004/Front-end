@@ -1,0 +1,126 @@
+@import url("https://fonts.google.com/specimen/Montserrat");
+@import url("https://fonts.google.com/specimen/Fraunces");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+--cream: hsl(30, 38%, 92%);
+--very-dark-blue: hsl(212, 21%, 14%);
+--dark-grayish-blue: hsl(228, 12%, 48%);
+--white: hsl(0, 0%, 100%);
+}
+body{
+    background-color:var(--cream) ;
+    background-position-x: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+.card{
+    background-color: var(--white);
+    max-width: 600px;
+    margin:0 1rem;
+    border-radius: 1rem;
+    display: flex;
+}
+.img-container{
+    width: 50%;
+}
+.img-container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.details-container{
+    width: 50%;
+    padding: 2rem;
+}
+.details-container .montserrat{
+    font-family: Montserrat;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+.details-container .name{
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 29px;
+    margin-bottom: 18px;
+}
+.details-container .description{
+    font-family:Montserrat ;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+.price-container{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.current-price{
+    font-family: Fraunces;
+    color: var(--dark-cyan);
+    font-size: 30px;
+}
+.old-price{
+    font-family: Montserrat;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    margin-left: 25px;
+    text-decoration: line-through;
+}
+button{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: var(--dark-cyan);
+    color: white;
+    border: none;
+    gap: 1rem;
+    border-radius: 7px;
+    margin-top: 15px;
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 2rem;
+}
+i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+@media(max-width:750px){
+    .card{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .img-container{
+        width: 100%;
+        height:45%;
+    }
+    .img-container img{
+        content: url("./images/image-product-mobile.jpg");
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    }
+    .details-container{
+        width: 100%;
+    }
+    .details-container .name{
+        padding-right: 0;
+    }
+}

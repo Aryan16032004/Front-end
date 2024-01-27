@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Project</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .list-grid,.input-grid{
+            display: grid;
+            grid-template-columns: 200px 150px 100px;
+            column-gap: 10px;
+            row-gap: 10px;
+            align-items: center;
+        }
+        .input-grid{
+            margin-bottom: 10px;
+            align-items: stretch;
+        }
+        .name-input,.date-input{
+            font-size: 15px;
+            padding: 6px;
+        }
+        .add-btn{
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .delete-btn{
+            background-color: darkred;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="input-grid">
+        <input class="js-input name-input" type="text" placeholder="Todo name">
+        <input class="js-date date-input" type="date">
+        <button class="add-btn" onclick="addelement();">Add</button>
+    </div>
+    <div class="display-name list-grid"></div>
+
+    <script>
+        const a1=[{name: 'Aryan',bdate:'2004-6-16'},{
+            name: 'Ayush',bdate:'2005-11-4'
+        }];
+        renderlist();
+        function renderlist(){
+            let todolistHtml='';
+            a1.forEach((todoObject,index) => {
+            const {name,bdate}=todoObject;
+            const html= `
+                <div>${name}</div>
+                <div>${bdate} </div>
+                    <button onclick="
+                a1.splice(${index},1);
+                renderlist();
+                " class="delete-btn">Delete</button>
+                `;
+             todolistHtml+=html;
+            });
+        //     for(let i=0;i<a1.length;i++){
+        //     const todoObject=a1[i];
+        //     // const name=todoObject.name;
+        //     // const bdate=todoObject.bdate;
+        //     const {name,bdate}=todoObject;
+        //     const html= `
+        //         <div>${name}</div>
+        //         <div>${bdate} </div>
+        //             <button onclick="
+        //         a1.splice(${i},1);
+        //         renderlist();
+        //         " class="delete-btn">Delete</button>
+        //         `;
+        //      todolistHtml+=html;
+        // }
+        document.querySelector('.display-name').innerHTML=todolistHtml;
+        }
+        
+        function addelement(){
+           const inputValue=document.querySelector('.js-input');
+           const name=inputValue.value;
+           const inputDate=document.querySelector('.js-date');
+           const bdate=inputDate.value;
+           a1.push({name: name,bdate: bdate});
+           console.log(a1);
+           inputValue.value = '';
+           renderlist();
+        }
+    </script>
+</body>
+</html>

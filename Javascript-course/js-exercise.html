@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 550;
+            cursor: pointer;
+        }
+        .is-click{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class=" js-btn btn" onclick="istoggled('.js-btn');">Gaming</button>
+    <button class=" js-btn2 btn" onclick="istoggled('.js-btn2');">Music</button>
+    <button class=" js-btn3 btn" onclick="istoggled('.js-btn3');">Tech</button>
+
+    <script>
+       function istoggled(selector){
+        const buttonElement= document.querySelector(selector);
+        if(!buttonElement.classList.contains('is-click')){
+            turnOffPreviousButton();
+            buttonElement.classList.add('is-click')
+        }
+        else{
+            buttonElement.classList.remove('is-click')
+        }
+
+       }
+
+       function turnOffPreviousButton() {
+  const previousButton = document.querySelector('.is-click');
+  if (previousButton) {
+    previousButton.classList.remove('is-click');
+  }
+       }
+
+    </script>
+</body>
+</html>

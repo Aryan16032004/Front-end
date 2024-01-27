@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="button9b();">9b</button>
+
+    <button onclick="choice('heads');">heads</button>
+    <button onclick="choice('tails');">tails</button>
+    <p class="js-choice"></p>
+
+    <div>
+        <input class="js-input" onkeydown="console.log(event.key);
+        displaykeydown(event);
+        " type="text" placeholder="Name">
+        <button onclick="display();">Submit</button>
+        <p class="js-name"></p>
+    </div>
+
+
+    <input placeholder="Type something" class="js-input1"
+      onkeyup="
+        const inputElement = document.querySelector('.js-input1');
+        document.querySelector('.js-message')
+          .innerHTML = inputElement.value;
+      ">
+
+    <p class="js-message"></p>
+
+    <script>
+        function displaykeydown(event){
+            if(event.key==='Enter'){
+                display();
+            }
+        }
+
+        function display(){
+            const inputElemet=document.querySelector('.js-input');
+            const name=inputElemet.value;
+            document.querySelector('.js-name').innerHTML=`Your name is: ${name}`
+        }
+
+        function choice(value){
+            document.querySelector('.js-choice').innerHTML=(`You chose : ${value}`)
+        }
+
+        function button9b(){
+            if(buttonElemet.innerText==='9b'){
+            buttonElemet.innerHTML='9b done';
+        }
+        }
+        const buttonElemet=document.querySelector('button');
+    </script>
+</body>
+</html>
