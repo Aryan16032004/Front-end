@@ -8,7 +8,7 @@
 .navbar{
     background-color: white;
     z-index: 2;
-    height: 10vh;
+    height: 80px;
     width: 100%;
     /* background-color: red; */
     position: fixed;
@@ -16,29 +16,41 @@
     align-items: center;
     box-shadow: 0 1px 8px rgba(0,0,0,0.4);
 }
-.image{
+.myntra-image{
     height: 35px;
     margin-left: 50px;
     margin-right: 0;
+    cursor: pointer;
 }
 .navigation-menu{
     /* background-color: black; */
-    width: 35vw;
+    width: 500px;
+    min-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
     margin-left: 80px;
-    height: 7vh;
+    /* height: 7vh; */
+    /* box-sizing: content-box; */
+    
+    
 }
 .navigation-menu a{
     text-decoration: none;
     color: black;
     font-weight: 700;
+    padding: 28px 0;
+    border-bottom: 2.5px solid white;
     /* background-color: green; */
 }
+.navigation-menu a:hover{
+    border-bottom: 2.5px solid #ee5f73;;
+}
+
 .input{
     width:25vw;
+    min-width: 300px;
     outline: none;
     border: none;
     background: #f5f5f6;;
@@ -63,14 +75,14 @@
     display: flex;
     margin-left: 50px;
     background: #f5f5f6;
-    height: 5.5vh;
+    height:40px;
     width:33vw;
     border-radius: 3px;
 }
 .rnav{
     /* background-color: blue; */
     width: 8vw;
-    height: 6vh;
+    /* height: 6vh; */
     margin-left: 70px;
     display: flex;
     justify-content: center;
@@ -93,6 +105,8 @@ section{
     margin-left: 30px;
     font-size: 30px;
     letter-spacing: 7px;
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 .brands{
     display: flex;
@@ -101,6 +115,7 @@ section{
 }
 .brands img{
     display: flex;
-    height: 21.64vw;
+    /* height: 21.64vw; */
+    width: 253px;
     flex-wrap: wrap;
 }

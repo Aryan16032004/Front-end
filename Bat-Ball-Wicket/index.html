@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .game{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1{
+            margin-top: 10px;
+            font-size: 40px;
+        }
+        button{
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 4rem;
+            height: 2rem;
+            font-weight: 700;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="game">
+        <h1>Bat Ball And Stump Game</h1>
+        <div class="btn">
+            <button onclick="playgame('Bat')">Bat</button>
+            <button onclick="playgame('Ball')">Ball</button>
+            <button onclick="playgame('Wicket')">Wicket</button>
+            <button onclick="reset()" id="rest">Reset</button>
+        </div>
+   
+    <p id="userChoice"></p>
+    <p id="computerChoice"></p>
+    <p id="result"></p>
+    <p id="score"></p>
+    </div>
+    
+</body>
+<script src="index.js">
+    
+</script>
+</html>
