@@ -1,6 +1,23 @@
 let computerChoice;
     let userChoice;
 
+    let isAutoplaying=false;
+    let intervalid;
+
+    function autoplay(){
+        if(!isAutoplaying){  
+       intervalid= setInterval(() => {
+            const playerMove= ComputerChoice();
+            playgame(playerMove);
+        },1000);
+        isAutoplaying=true;
+    }
+else{
+    clearInterval(intervalid);
+    isAutoplaying=false;
+  }  
+}
+
     let score=JSON.parse(localStorage.getItem('score'))||
     {
         Win:0,
