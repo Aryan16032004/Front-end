@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, rgb(221, 28, 28), rgb(220, 45, 45), rgb(202, 47, 83), rgb(179, 57, 57));
+    height: 100vh;
+    position: relative;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    position: fixed;
+    width: 100vw;
+    height: 5rem;
+    background-color: black;
+   align-items: center;
+}
+
+#navbar button{
+    
+    /* color: white; */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#container{
+    /* z-index: -1; */
+    position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    display: flex;
+    /* border: 2px solid red; */
+    position: relative;
+    height: 30vw;
+    width: 55vw;
+    
+}
+
+.user{
+    /* border: 2px solid black; */
+    /* border-radius: 15px; */
+    width: 27.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 5rem; */
+}
+#user1{
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+background-color: rgb(223, 83, 83);
+}
+#user2{
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+background-color: rgb(218, 62, 80);
+}
+.name{
+   text-align: center;
+   border: none;
+   outline: none;
+   width: 100%;
+   background-color: transparent;
+   cursor: text;
+   color: black;
+}
+.name::placeholder{
+    color: black;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+}
+.score{
+    color:rgb(223, 165, 165) ;
+}
+.current-score-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(198, 190, 177);
+    gap: 0.15rem;
+    font-size: 1.5vw;
+    margin-bottom: 50px;
+    background-color: rgb(229, 20, 20);
+    border-radius: 10px;
+    width: 12vw;
+    height: 6vw;
+}
+
+#control{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 1rem;
+    /* top:0; */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3.1vw;
+}
+
+#new-game{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:3.1vw;
+}
+
+#Dice-Value{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:35%;
+}
+#dice-number{
+    color: rgb(200, 221, 241); 
+    font-size: 3vw;
+}
+#dice, #hold,#new{
+    background-color: rgb(200, 221, 241);
+    border-radius: 20px;
+    padding: 6px 20px ;
+
+}
